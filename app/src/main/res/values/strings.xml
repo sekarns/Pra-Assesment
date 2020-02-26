@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pra Assesment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="bangun_datar">Bangun Datar</string>
+    <string name="persegi_panjang">Persegi Panjang</string>
+    <string name="segitiga">Segitiga</string>
+    <string name="about">About</string>
+    <string name="share_data">Luas = %1$d, Keliling = %2$d</string>
+</resources>

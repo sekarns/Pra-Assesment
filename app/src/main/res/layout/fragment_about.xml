@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".AboutFragment">
+            <TextView
+                    android:text="Sekar Nawang Sukma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvNama"
+                    android:textSize="32sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintVertical_bias="0.385"/>
+            <TextView
+                    android:text="D3IF - 42 - 04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/kelas"
+                    android:textSize="32sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNama"
+                    app:layout_constraintStart_toStartOf="@+id/tvNama"
+                    app:layout_constraintEnd_toEndOf="@+id/tvNama"/>
+            <TextView
+                    android:text="6706184035"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nim"
+                    android:textSize="32sp"
+                    android:textColor="@android:color/black"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/kelas"
+                    app:layout_constraintStart_toStartOf="@+id/kelas" app:layout_constraintEnd_toEndOf="@+id/kelas"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

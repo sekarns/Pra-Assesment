@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="luasS" type="Integer"/>
+        <variable name="kelilingS" type="Double"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            tools:context=".SegitigaFragment">
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/etAlas"
+                android:hint="Alas"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.125"
+                app:layout_constraintVertical_bias="0.023"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/etTinggi"
+                android:hint="Tinggi"
+                app:layout_constraintTop_toBottomOf="@+id/etAlas"
+                app:layout_constraintStart_toStartOf="@+id/etAlas"
+                app:layout_constraintEnd_toEndOf="@+id/etAlas"/>
+        <Button
+                android:text="Hitung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/buttonHitungSegitiga"
+                app:layout_constraintStart_toStartOf="@+id/etTinggi"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/etTinggi"/>
+        <TextView
+                android:text="Luas      : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvLuasSegitiga"
+                android:layout_marginTop="28dp"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/buttonHitungSegitiga"
+                app:layout_constraintStart_toStartOf="@+id/buttonHitungSegitiga"
+        />
+        <TextView
+                android:text="Keliling  : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvKelilingSegitiga"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/tvLuasSegitiga"
+                app:layout_constraintStart_toStartOf="@+id/tvLuasSegitiga"
+                android:layout_marginTop="12dp"/>
+        <TextView
+                android:text="Luas      : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_luasS"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toTopOf="@+id/tvLuasSegitiga" android:layout_marginStart="156dp"
+                app:layout_constraintStart_toStartOf="@+id/tvLuasSegitiga" android:layout_marginLeft="156dp"
+                app:layout_constraintBottom_toTopOf="@+id/text_kelilingS"/>
+        <TextView
+                android:text="Keliling  : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_kelilingS"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/tvKelilingSegitiga"
+                android:layout_marginLeft="160dp" android:layout_marginStart="160dp"
+                app:layout_constraintTop_toTopOf="@+id/tvKelilingSegitiga"
+                app:layout_constraintBottom_toBottomOf="@+id/tvKelilingSegitiga"/>
+        <Button
+                android:text="Share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonShareSegitiga"
+                app:layout_constraintTop_toBottomOf="@+id/tvKelilingSegitiga"
+                app:layout_constraintStart_toStartOf="@+id/tvKelilingSegitiga"
+                android:layout_marginTop="32dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

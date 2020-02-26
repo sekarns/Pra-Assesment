@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="luasPP" type="Integer"/>
+        <variable name="kelilingPP" type="Integer"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:padding="16dp"
+             tools:context=".PersegiPanjangFragment">
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/etPanjang"
+                android:hint="Panjang" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.023"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/etLebar"
+                android:hint="Lebar"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/etPanjang"
+                app:layout_constraintStart_toStartOf="@+id/etPanjang"
+                app:layout_constraintEnd_toEndOf="@+id/etPanjang"/>
+        <Button
+                android:text="Hitung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/buttonHitungPersegiPanjang"
+                app:layout_constraintStart_toStartOf="@+id/etPanjang"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/etLebar"/>
+        <TextView
+                android:text="Luas      : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvLuasPersegiPanjang"
+                android:layout_marginTop="28dp"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@+id/buttonHitungPersegiPanjang"
+                app:layout_constraintStart_toStartOf="@+id/buttonHitungPersegiPanjang"
+        />
+        <TextView
+                android:text="Keliling  : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/tvKelilingPersegiPanjang"
+                app:layout_constraintTop_toBottomOf="@+id/tvLuasPersegiPanjang"
+                android:layout_marginTop="12dp"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="@+id/tvLuasPersegiPanjang"
+        />
+        <TextView
+                android:text="@{luasPP.toString()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text_luasPP"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toTopOf="@+id/tvLuasPersegiPanjang" android:layout_marginStart="104dp"
+                app:layout_constraintStart_toStartOf="@+id/tvLuasPersegiPanjang" android:layout_marginLeft="104dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvLuasPersegiPanjang"
+                app:layout_constraintVertical_bias="1.0"/>
+        <TextView
+                android:text="@{kelilingPP.toString()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text_kelilingPP"
+                android:textSize="22sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toEndOf="@+id/tvKelilingPersegiPanjang" android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp" app:layout_constraintTop_toTopOf="@+id/tvKelilingPersegiPanjang"
+                app:layout_constraintBottom_toBottomOf="@+id/tvKelilingPersegiPanjang"/>
+        <Button
+                android:text="Share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonSharePersegiPanjang"
+                android:layout_marginTop="32dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvKelilingPersegiPanjang"
+                app:layout_constraintStart_toStartOf="@+id/tvKelilingPersegiPanjang"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
